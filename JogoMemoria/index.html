@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo da Memória Moderno</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Jogo da Memória</h1>
+    </header>
+
+    <section id="player-info">
+      <label for="player-name">Digite seu nome:</label>
+      <input type="text" id="player-name" placeholder="Seu nome..." required>
+      <label for="difficulty">Selecione a dificuldade:</label>
+      <select id="difficulty">
+        <option value="easy">Fácil</option>
+        <option value="medium">Médio</option>
+        <option value="hard">Difícil</option>
+      </select>
+      <button id="start-btn">Começar</button>
+    </section>
+
+    <section id="game-info" class="hidden">
+      <div class="status">
+        <p><span id="timer">Tempo: 60s</span></p>
+        <p><span id="score">Pontuação: 0</span></p>
+      </div>
+    </section>
+
+    <main id="game-board" class="hidden"></main>
+
+    <section id="ranking" class="hidden">
+      <h2>Ranking</h2>
+      <button id="clear-ranking-btn">Limpar Ranking</button>
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Jogador</th>
+            <th>Pontos</th>
+            <th>Tempo</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
